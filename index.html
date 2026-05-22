@@ -23,13 +23,29 @@
             color: #333;
         }
 
-        /* Hero / Header Section */
+        /* Hero / Header Section dengan Animasi Silver */
         .hero-section {
-            background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 50%, #cbd5e1 100%);
+            /* Gradasi warna perak yang lebih kompleks untuk efek kilau */
+            background: linear-gradient(135deg, #cbd5e1 0%, #ffffff 25%, #94a3b8 50%, #ffffff 75%, #cbd5e1 100%);
+            background-size: 300% 300%;
+            animation: silverShimmer 8s ease-in-out infinite;
             padding: 6rem 0 4rem;
             border-bottom: 3px solid #94a3b8;
             position: relative;
             overflow: hidden;
+        }
+
+        /* Keyframes untuk pergerakan kilau perak */
+        @keyframes silverShimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .hero-title {
@@ -152,7 +168,6 @@
     </nav>
 
     <!-- HEADER / HERO SECTION -->
-    <!-- TUGAS 1: Edit Slogan Tim di sini -->
     <header class="hero-section text-center">
         <div class="container">
             <h1 class="hero-title">Tim Meja 7</h1>
@@ -164,7 +179,6 @@
     <main class="container">
 
         <!-- ABOUT SECTION -->
-        <!-- TUGAS 2: Edit Deskripsi Tim -->
         <section id="about" class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="about-card p-4 p-md-5 text-center">
@@ -188,7 +202,7 @@
             <!-- GRID TIM -->
             <div class="row g-4 justify-content-center">
 
-                <!-- TUGAS 3: Edit Data Anggota 1 (Sudah Diisi) -->
+                <!-- Anggota 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card team-card h-100">
                         <div class="card-body text-center p-4">
@@ -206,15 +220,14 @@
                     </div>
                 </div>
 
-                <!-- TUGAS 4: Edit Data Anggota 2 -->
+                <!-- Anggota 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card team-card h-100">
                         <div class="card-body text-center p-4">
                             <div class="avatar-container">
                                 <i class="fa-solid fa-user-astronaut"></i>
                             </div>
-                            <h4 class="member-name">Super Ramadhan Putra
-                            </h4>
+                            <h4 class="member-name">Super Ramadhan Putra</h4>
                             <p class="member-role">IOT Engineer</p>
                             <hr class="text-muted opacity-25">
                             <div class="text-start ms-3">
@@ -225,7 +238,7 @@
                     </div>
                 </div>
 
-                <!-- TUGAS 5: Edit Data Anggota 3 -->
+                <!-- Anggota 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card team-card h-100">
                         <div class="card-body text-center p-4">
@@ -243,15 +256,15 @@
                     </div>
                 </div>
 
-                <!-- TUGAS 5: Edit Data Anggota 4 -->
+                <!-- Anggota 4 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card team-card h-100">
                         <div class="card-body text-center p-4">
                             <div class="avatar-container">
                                 <i class="fa-solid fa-user-ninja"></i>
                             </div>
-                            <h4 class="member-name">rizal arief</h4>
-                            <p class="member-role">Backend Engineer </p>
+                            <h4 class="member-name">Rizal Arief</h4>
+                            <p class="member-role">Backend Engineer</p>
                             <hr class="text-muted opacity-25">
                             <div class="text-start ms-3">
                                 <p class="contact-info"><i class="fa-solid fa-phone"></i> 0813xxxxxxx</p>
@@ -260,7 +273,6 @@
                         </div>
                     </div>
                 </div>
-
 
             </div>
         </section>
@@ -276,4 +288,5 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
